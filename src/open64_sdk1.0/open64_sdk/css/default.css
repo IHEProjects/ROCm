@@ -1,0 +1,71 @@
+a {text-decoration: none;}
+a:hover {text-decoration: underline;}
+.clear {clear: both; height: 0px;}
+.left {float: left;}
+.right {float: right;}
+.align-right {float: right; display: inline; margin: 0 0 20px 20px;}
+
+body {font-family: Arial, Helvetica, 'sans serif';}
+
+.serif {font-family: Georgia, 'Times New Roman', serif;}
+
+#container {margin: auto; overflow: hidden; width: 968px; padding: 0 8px 0px 8px;}
+
+#header {width: 910px; height: 67px; background: url(../images/headerBg.jpg) no-repeat top left; padding: 21px 31px 31px 27px;}
+#nav  {float: right; font-size: 11px;}
+#nav li {float: left; color: #ebeef0; padding: 0 7px; border-right: 2px solid #686a6c;}
+#nav li.ww {padding: 0 0 0 7px; border: none;}
+#nav li a {display: block; color: #ebeef0; padding: 2px 0;}
+#nav li.ww a {background: url(../images/map.gif) no-repeat right center; padding: 2px 39px 2px 0;}
+
+#subnav {position: relative; width: 147px; padding: 15px 20px; background: url(../images/navtl.gif) no-repeat top left #d2dadd; float: left;}
+#br {position: absolute; bottom: 0; right: 0; background: url(../images/navbr.gif) no-repeat top left; width: 14px; height: 14px;}
+#tr {position: absolute; top: 0; right: 0; background: url(../images/navtr.gif) no-repeat top left; width: 14px; height: 14px;}
+#bl {position: absolute; bottom: 0; left: 0; background: url(../images/navbl.gif) no-repeat top left; width: 14px; height: 14px;}
+#subnav {font-size: 11px; color: black;}
+#subnav li {line-height: 10px; margin: 0 0 12px 0;}
+#subnav li ul {margin: 12px 0 0 15px;}
+#subnav li a {color: black;}
+
+#rightcol {width: 754px; float: right;}
+#rightcol h1 {font-weight: normal; font-size: 18px; margin: 0 0 20px 0;}
+#rightcol h2 {background: url(../images/h2bg.gif) repeat-x; padding: 3px 10px; font-size: 11px; color: white; font-weight: normal; margin: 0 0 18px 0;}
+#rightcol h4 {font-size: 11px; font-weight: bold; margin: 0 0 10px 0; line-height: 19px;}
+#rightcol h5 {padding: 0 0 0 10px; font-size: 11px; font-weight: bold; margin: 0 0 4px 0;}
+#rightcol p {padding: 0 0 0 10px; font-size: 11px; font-weight: normal; margin: 0 0 4px 0;}
+#rightcol ul {padding: 0 0 20px 20px;}
+#rightcol ul li {background: url(../images/bull.gif) no-repeat 0 7px; font-size: 11px; line-height: 15px; padding: 0 0 0 10px;}
+#rightcol ul li li {background: none;}
+#rightcol ul li ul {padding: 7px 0 7px 0;}
+#rightcol ol {padding: 0 0 20px 20px;}
+#rightcol ol li {padding: 0 0 0 14px; font-size: 11px; color: black; line-height: 15px; background: url(../images/arrow.gif) no-repeat 0 4px; margin: 0 0 4px 0;}
+#rightcol ol li ol {padding: 7px 0 7px 10px;}
+#rightcol ol li ol li {background: url(../images/bull.gif) no-repeat 0 5px;}
+#rightcol ol li a {color: #019966; text-decoration: underline;}
+#rightcol ol li a:hover {text-decoration: none;}
+
+.download {display: block; width: 173px; height: 23px; background: url(../images/downloadnow.gif) no-repeat; font-size: 11px; padding: 40px 0 0 19px; color: black;} 
+.download:hover {text-decoration: none;}
+
+#footer {width: 948px; border-top: 1px solid #dfdfdf; overflow: hidden; padding: 15px 10px; margin: 10px 0 0 0; font-size: 11px; color: #a2a2a2;}
+#footer a {color: #a2a2a2;}
+#footer li {display: block; float: left; padding: 0 5px; border-right: 1px solid #a2a2a2;}
+#footer li.last {border: none;}
+
+#rightcol ul.tabs {width: 199px; float: left; padding: 10px 0 0 0;;}
+#rightcol .tabs li {width: 199px; height: 39px; margin: 0 0 5px 0; background: none; padding: 0;}
+
+.tabs li a {display: table-cell !important; display: block; width: 171px; height: 39px; padding: 0px 18px 0 10px; color: black; vertical-align: middle;}
+.tabs li.active a, .tabs li a:hover {background: url(../images/tabbg.gif) no-repeat left center #edf0f1; text-decoration: none;}
+
+.tab_container {width: 547px; float: left;}
+
+.tab_content {position: relative; background: #edf0f1 url(../images/tl.gif) no-repeat top left; float: left; width: 487px; padding: 20px 30px; min-height: 200px; margin: 0 0 30px 0;}
+.tr1 {width: 12px; height: 12px; position: absolute; top: 0; right: 0; background: url(../images/tr.gif) no-repeat;}
+.br1 {width: 12px; height: 12px; position: absolute; bottom: 0; right: 0; background: url(../images/br.gif) no-repeat;}
+.bl1 {width: 12px; height: 12px; position: absolute; bottom: 0; left: 0; background: url(../images/bl.gif) no-repeat;}
+
+#rightcol .tab_content h3 {font-size: 16px; color: #000000; margin: 0 0 18px 0; font-weight: normal;}
+#rightcol .tab_content p {padding: 0 0 0 0px; font-size: 11px; font-weight: normal; margin: 0 0 14px 0; line-height: 19px;}
+#rightcol .tab_content p a {padding: 0 0 0 14px; font-size: 11px; color: black; line-height: 15px; background: url(../images/arrow.gif) no-repeat 0 4px; margin: 0 20px 4px 0; color: #019966; text-decoration: underline;}
+#rightcol .tab_content p a:hover {text-decoration: none;}

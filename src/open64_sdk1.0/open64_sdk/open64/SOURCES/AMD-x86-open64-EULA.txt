@@ -1,0 +1,29 @@
+                            AMD License Agreement
+                            ---------------------
+The x86 Open64 Compiler contains certain components owned and licensed by 
+AMD as well as other third parties. The x86 Open64 Compiler is licensed under
+both proprietary and open source licenses.  The following lists the major 
+components with their corresponding license agreement.  The actual copyright
+notices and licenses are reproduced in the source files.
+ 
+Review and agree to all agreements before downloading the x86 Open64 Compiler.
+ 
+Major Component & License
+
+    * Compiler Components : driver, front-ends, code generator, optimizer, 
+	  IPA linker, instrumentation library GPL version 2
+    * Runtime Libraries : Fortran runtime and I/O library, huge page 
+	  support library, math library, compiler support runtime library, 
+	  OpenMP runtime library LGPL version 2.1
+    * Optimized Vector Math Library : libacml_mv AMD proprietary license
+
+AMD provides limited support under the terms and conditions of its x86 Open64
+Compiler Service Level Agreement.
+ 
+THE SOFTWARE AND ANY OTHER MATERIALS ARE PROVIDED "AS IS" WITH ALL FAULTS,
+AND WITHOUT WARRANTY OF ANY KIND. FURTHERMORE, NO WARRANTIES, EXPRESS OR 
+IMPLIED, ARE MADE WITH RESPECT TO THE SOFTWARE OR OTHER MATERIALS INCLUDING,
+BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+PURPOSE, ANY WARRANTIES THAT MAY ARISE FROM USAGE OF TRADE OR COURSE OF DEAL-
+ING, AND ANY IMPLIED WARRANTIES OF TITLE OR NON-INFRINGEMENT.
+

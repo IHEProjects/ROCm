@@ -1,0 +1,251 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title></title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	
+<link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="css/default.css" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">  
+$(document).ready(function() {
+	$(".tab_content").hide();
+	$("ul.tabs li:first").addClass("active").show();
+	$(".tab_content:first").show();
+
+	$("ul.tabs li").click(function() {
+		$("ul.tabs li").removeClass("active");
+		$(this).addClass("active");
+		$(".tab_content").hide();
+		var activeTab = $(this).find("a").attr("href");
+		$(activeTab).fadeIn();
+		return false;
+	});
+});
+</script> 
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+		<a href=""><img src="images/logo.gif" class="left" alt=""/></a>
+		
+		<ul id="nav">
+			<li><a href="http://www.amd.com/" target="_link">AMD Home</a></li>
+			<li class="ww"><a href="http://www.amd.com/Pages/AMDWorldwide.aspx" target="_link">Worldwide</a></li>
+		</ul><!--nav-->
+	</div><!--header-->
+	
+	<div id="subnav">
+		<div id="br"><!----></div><!--br-->
+		<div id="bl"><!----></div><!--bl-->
+		<div id="tr"><!----></div><!--tr-->
+		<ul>
+			<li><a href="#open64">AMD Open64 Software Development Kit</a></li>
+			<li><a href="#getting">Getting Started</a>		
+				<ul>
+					<li><a href="#system">System Requirements</a></li>
+					<li><a href="#installation">Installation</a></li>
+				</ul>
+			</li>
+
+			<li><a href="#included">Included Tools and Libraries</a>	
+				<ul>
+					<li><a href="#included">x86 Open64 Compiler Suite</a></li>
+
+					<li><a href="#included">AMD CodeAnalyst Performance Analyzer</a></li>
+
+					<li><a href="#included">AMD Core Math Library (ACML)</a></li>
+
+					<li><a href="#included">AMD Core Math Library for Graphic Processors (ACML-GPU)</a></li>
+
+					<li><a href="#included">AMD LibM</a></li>
+				</ul>
+			</li>
+
+			<li><a href="#related">Related Documentation</a></li>
+		
+			<li><a href="#learn">Learn More</a></li>
+		</ul>
+	</div><!--subnav-->
+	
+	<div id="rightcol">
+		<h1 class="serif" id="open64">AMD Open64 Software Development Kit</h1>
+		<h4>The AMD Open64 SDK is a set of tools, libraries,  documentation and headers that developers can use to create high performing applications that run on Linux® operating systems.</h4>
+		
+		<h5>Key Features</h5>
+		<ul>
+			 <li>World class code generation tools with advanced optimizations and multi-threading features</li>
+			 <li>Full native support for OpenMP directive or multi-core parallelization with C, C++, and Fortran languages</li> 
+			 <li>Auto-parallelization for the latest AMD microprocessors</li>
+			 <li>Graphical performance profiler to monitor and measure application performance</li>
+			 <li>Optimized math libraries that provide an easy path to faster, multi-threaded applications</li>
+			 <li>Support for various MPI implementations, e.g. OpenMPI, MPICH1, MPICH2, LAM, and more</li> 
+			 <li>Fully compatible with GNU toolchain</li>
+		</ul>
+		
+		<h2>Getting Started</h2>
+		
+		<!--<a class="align-right download" href="">AMD Open64 SDK</a>-->
+		
+		<h5 id="system">System Requirements</h5>
+		<ul>
+		     <li>Host Processor: 64-bit or 32-bit x86 processor based machine with one or more AMD microprocessors.</li> 
+			 <li>Operating System: The software must be co-installed with a version of the Linux operating system with 32-bit or 64-bit kernel version 2.4.18 or higher. Supported distributions are SLES 11 SP1 and RHEL 5.5 Building 64-bit executables requires a 64-bit operating system.</li>
+			 <li>Memory requirements: 16 MB or more</li>
+			 <li>Hard disk: 250 MB during installation</li>
+			 <li>Other: Web browser and Adobe Acrobat Reader for viewing online documentation.</li>
+		</ul>
+		
+		<h5 id="installation">Installation Instructions</h5>
+		
+		<ul>
+		     <li>Mount the DVD</li>
+			<li>Change to the DVD directory
+				<ul>
+					<li>cd $DVD</li>
+				</ul>
+			</li>
+			<li>Run the installation script as root
+				<ul>
+					<li>./install.sh</li>
+				</ul>
+			</li>
+			<li>Adjust $PATH settings and other variables as described in $DVD/ReadMe.txt</li>
+		</ul>
+
+		<h2 id="included">Included Tools and Libraries</h2>
+		
+		<ul class="tabs"> 
+			<li><a href="#tab1">x86 Open64 Compiler Suite</a></li> 
+			<li><a href="#tab2">AMD CodeAnalyst Performance Analyzer</a></li> 
+			<li><a href="#tab3">AMD Core Math Library (ACML)</a></li> 
+			<li><a href="#tab4">AMD Core Math Library for Graphic Processors (ACML-GPU)</a></li> 
+			<li><a href="#tab5">AMD LibM</a></li> 
+		</ul> 
+		
+		<div class="tab_container">
+			<div id="tab1" class="tab_content"> 
+				<div class="tr1"><!----></div><!--tr1-->
+				<div class="br1"><!----></div><!--br1-->
+				<div class="bl1"><!----></div><!--bl1-->
+				<h3 class="serif">x86 Open64 Compiler Suite</h3>
+				<p>The x86 Open64 compiler system is a high performance, production quality code generation tool designed for high performance parallel computing workloads. This suite offers advanced optimizations, multi-threading features, and support for vectorization, interprocedural analysis, loop transformations, and other functions to help accelerate development and tuning of C, C++, and Fortran applications targeting 32-bit and 64-bit Linux platforms.
+<p>Compiler optimizations include:</p>
+<ul>
+	<li>Inter-procedural optimization support function inlining, including library functions</li>
+	<li>Full support for profile feedback based compiler optimizations</li>
+	<li>Vectorization support (SSE4)</li>
+	<li>Memory hierarchy and memory allocation optimizations, including support for 1GB huge pages</li>
+	<li>Loop unrolling, loop fusion, and cache tiling</li>
+	<li>Enhanced auto-parallelization of loops specifically optimized for multi-core processors</li>
+	<li>State-of-the-art dependence analysis and global optimization</li>
+	<li>Support for processor affinity mapping in the OpenMP and parallel runtime library</li>
+	<li>Multi-core scalability optimizations enabled with compiler option</li>
+</ul>
+</p>
+
+				<p><a href="files/Open64/x86_open64_user_guide.pdf">User Guide</a> <a href="files/Open64/x86Open64QuickRef.pdf">Quick Reference Guide</a></p>
+			</div><!--tab1-->
+			
+			<div id="tab2" class="tab_content"> 
+				<div class="tr1"><!----></div><!--tr1-->
+				<div class="br1"><!----></div><!--br1-->
+				<div class="bl1"><!----></div><!--bl1-->
+				<div class="tr1"><!----></div><!--tr1-->
+				<div class="br1"><!----></div><!--br1-->
+				<div class="bl1"><!----></div><!--bl1-->
+				<h3 class="serif">AMD CodeAnalyst Performance Analyzer</h3>
+				<p>AMD CodeAnalyst Performance Analyzer is an open source, front-end graphical 
+user interface to Oprofile. AMD CodeAnalyst taps into the performance monitoring capabilities 
+of AMD processors and supports the collection of up to 32 performance events in a single 
+test run. This capability makes it easier to stage performance experiments. AMD CodeAnalyst 
+also supports Instruction-Based Sampling (IBS), a new performance measurement technique 
+available on AMD Family 10h processors. </p>
+
+<p><a href="files/CodeAnalyst/CodeAnalyst_linux_users_guide-1.0.pdf">User Guide</a> <a href="files/CodeAnalyst/DiffAnalyst_linux_users_guide-1.0.pdf">Diff Analysis Guide</a></p>
+			</div><!--tab2-->
+			
+			<div id="tab3" class="tab_content"> 
+				<div class="tr1"><!----></div><!--tr1-->
+				<div class="br1"><!----></div><!--br1-->
+				<div class="bl1"><!----></div><!--bl1-->
+				<div class="tr1"><!----></div><!--tr1-->
+				<div class="br1"><!----></div><!--br1-->
+				<div class="bl1"><!----></div><!--bl1-->
+				<h3 class="serif">AMD Core Math Library (ACML)</h3>
+				<p>ACML provides a free set of thoroughly optimized and threaded math routines for HPC, scientific, engineering and related compute-intensive applications. ACML is ideal for weather modeling, computational fluid dynamics, financial analysis, oil and gas applications, and more.   Included are optimized BLAS and LAPACK routines, Fast Fourier Transforms (FFTs), scalar/vector/array math transcendental library routines, and Random Number Generators.  ACML is OpenMP enabled.</p>
+
+<p><a href="files/ACML/acml.pdf">User Guide</a> <a href="files/ACML/building_with_acml.html" target="openNew">Building with Open64</a></p>
+			</div><!--tab3-->
+			
+			<div id="tab4" class="tab_content"> 
+				<div class="tr1"><!----></div><!--tr1-->
+				<div class="br1"><!----></div><!--br1-->
+				<div class="bl1"><!----></div><!--bl1-->
+				<h3 class="serif">AMD Core Math Library for Graphic Processors (ACML-GPU)</h3>
+				<p>AMD Core Math Library for Graphic Processors (ACML-GPU) provides an ATI Stream-accelerated version of ACML. ACML-GPU accelerates certain routines in ACML, such as SGEMM and DGEMM, by off-loading the computation to the compatible GPUs in the system. The library dynamically decides, based on the parameters passed to the routines, whether to run the computation on the CPU or GPU, depending on which processor will yield the best performance. ACML-GPU automatically scales its computation across multiple GPUs if available and can take advantage of the double precision floating point hardware in the GPU on products that contain hardware DPFP support.</p>
+
+<p><a href="files/ACML-GPU/acmlgpu_userguide.pdf">User Guide</a></p>
+			</div><!--tab4-->
+			
+			<div id="tab5" class="tab_content"> 
+				<div class="tr1"><!----></div><!--tr1-->
+				<div class="br1"><!----></div><!--br1-->
+				<div class="bl1"><!----></div><!--bl1-->
+				<h3 class="serif">AMD LibM</h3>
+				<p>AMD LibM is a software library containing a collection of basic math functions optimized for x86-64 processor based machines. AMD LibM is a C library, which users can link into their applications to replace compiler-provided math functions. Included in LibM 2.1 are 46 vector functions. </p>
+
+<p><a href="files/LibM/AMDlibmQuickReferenceGuide.pdf">Quick Reference Guide</a></p>
+			</div><!--tab5-->
+			
+		</div><!--tab_container-->
+		
+		<div class="clear"><!----></div><!--clear-->
+		
+		<h2 id="related">Related Documentation (PDF)</h2>
+		
+		<ol>
+		 <li><a href="files/Related/40546-PUB-Optguide_3-11_5-21-09.pdf">Software Optimization Guide for AMD Family 10h Processors</a></li>
+		 <li><a href="files/Related/31116.pdf">BIOS and Kernel Developer's Guide For AMD Family 10h Processors</a></li>
+		 <li>AMD64 Architecture Programmer's Manuals
+			 <ol>
+				 <li><a href="files/Related/24592.pdf">Vol. 1: Application Programming</a></li>
+				 <li><a href="files/Related/24593.pdf">Vol. 2: System Programming</a></li>
+				 <li><a href="files/Related/24594.pdf">Vol. 3: General-Purpose &amp; System Instructions</a></li>
+				 <li><a href="files/Related/26568.pdf">Vol. 4: 128-Bit Media Instructions</a></li>
+				 <li><a href="files/Related/26569.pdf">Vol. 5: 64-Bit Media and x87 Floating-Point Instructions</a></li>
+				 <li><a href="files/Related/43479.pdf">Vol. 6: 128-Bit and 256-Bit XOP, FMA4 and CVT16 Instructions</a></li>
+			 </ol>
+		 </li>
+		</ol>
+		
+		<h2 id="learn">Learn more about the tools and libraries in the AMD Open64 SDK</h2>
+		<p>Get documentation, code samples, installation notes, and more on each of the tools and libraries included in the<br/>AMD Open64 SDK at http://developer.amd.com/.</p>
+		<ol>
+			 <li><a href="http://developer.amd.com/cpu/open64/Pages/default.aspx?cmpid=sdkdvd1110" target="_link">x86 Open64 Compiler Suite</a></li>
+			 <li><a href="http://developer.amd.com/cpu/CodeAnalyst/codeanalystlinux/Pages/default.aspx?cmpid=sdkdvd1110" target="_link">AMD CodeAnalyst Performance Analyzer</a></li>
+			 <li><a href="http://developer.amd.com/cpu/Libraries/acml/pages/default.aspx?cmpid=sdkdvd1110" target="_link">AMD Core Math Library (ACML)</a></li>
+			 <li><a href="http://developer.amd.com/gpu/acmlgpu/Pages/default.aspx?cmpid=sdkdvd1110" target="_link">AMD Core Math Library for Graphic Processors (ACML-GPU)</a></li>
+			 <li><a href="http://developer.amd.com/cpu/Libraries/LibM/Pages/default.aspx?cmpid=sdkdvd1110" target="_link">AMD LibM</a></li>
+		</ol>
+		
+	</div><!--rightcol-->
+	
+	<div class="clear"><!----></div><!--clear-->
+	
+	<div id="footer">
+		<ul>
+			<li>&copy; 2010 Advanced Micro Devices, Inc.</li>
+			<li><a href="http://www.amd.com/us/aboutamd/Pages/copyright.aspx" target="_link">Terms and Conditions</a></li>
+			<li><a href="http://www.amd.com/us/aboutamd/Pages/privacy.aspx" target="_link">Privacy</a></li>
+			<li class="last"><a href="http://www.amd.com/us/aboutamd/Pages/trademarks.aspx" target="_link">Trademark</a></li>
+		</ul>
+	</div><!--footer-->
+
+</div><!--CONTAINER-->
+</body>
+</html>

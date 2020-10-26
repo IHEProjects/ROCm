@@ -1,0 +1,28 @@
+AMD Optimized LibM
+------------------------------------------------
+AMD LibM is a math library. It provides optimized implementation of a number of
+math functions from the C99 standard. The library is designed for use in 64-bit
+programs on x86-64 machines. Static and dynamic libraries are available for
+Linux(R) operating system.
+
+Hightlights of AMD LibM 3.6
+-----------------------------
+
+    * Bug fixes in scalar pow, exp, expf
+    * Performance gains in both single and double precision vector routines of pow(), log(), exp()
+
+Known Issues
+------------
+   * fastpow() - Maximum ULP error is 10.
+
+Version 3.6 Contents
+----------------------
+
+ New version of the optimized Functions
+    * vrs4_expf, vrs8_expf  ("float" vector {4,8} Elements)
+    * vrd2_exp, vrd4_exp2   ("double" vector {2,4} Elements)
+    * vrs4_logf, vrs8_logf  ("float" vector {4,8} Elements)
+    * vrd2_log,  vrd4_log   ("double" vector {2,4} Elements)
+    * vrs4_powf, vrs8_powf  ("float" vector {4,8} Elements)
+    * vrd2_pow, vrd4_pow    ("double" vector {2,4} Elements)
+
