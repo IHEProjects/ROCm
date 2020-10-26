@@ -1,4 +1,4 @@
-# Building PyTorch for ROCm
+# PyTorch for ROCm
 
 ## Install or update rocm-dev on the host system:
 
