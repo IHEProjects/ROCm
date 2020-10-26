@@ -64,3 +64,9 @@ pip install torchvision
 ```
 docker system prune -f
 ```
+
+# Dockerfile
+
+```
+docker build --rm -f ./ci/ubuntu18.04.Dockerfile -t rocm:latest .
+```
