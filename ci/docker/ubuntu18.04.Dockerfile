@@ -29,21 +29,21 @@ RUN mkdir -p ~/bin/ &&\
 # 1 Required Distribution Packages
 # 1.1 Debian or Ubuntu Packages
 # 1.2 Additional packages used by rocgdb
-RUN apt-get install cmake g++-5 g++ pkg-config libpci-dev libnuma-dev libelf-dev libffi-dev git python libopenmpi-dev gawk mesa-common-dev &&\
-    apt-get install texinfo libbison-dev bison flex libbabeltrace-dev python-pip libncurses5-dev liblzma-dev
+RUN apt-get install -y cmake g++-5 g++ pkg-config libpci-dev libnuma-dev libelf-dev libffi-dev git python libopenmpi-dev gawk mesa-common-dev &&\
+    apt-get install -y texinfo libbison-dev bison flex libbabeltrace-dev python-pip libncurses5-dev liblzma-dev
 
 RUN python -m pip install CppHeaderParser argparse
 
 # 2 Verify KFD Driver
-RUN wget -qO - http://repo.radeon.com/rocm/apt/debian/rocm.gpg.key | sudo apt-key add - &&\
-    echo 'deb [arch=amd64] http://repo.radeon.com/rocm/apt/debian/ xenial main' | sudo tee /etc/apt/sources.list.d/rocm.list &&\
+RUN wget -qO - http://repo.radeon.com/rocm/apt/debian/rocm.gpg.key | apt-key add - &&\
+    echo 'deb [arch=amd64] http://repo.radeon.com/rocm/apt/debian/ xenial main' | tee /etc/apt/sources.list.d/rocm.list &&\
     apt-get update &&\
-    apt-get install rock-dkms
+    apt-get install -y rock-dkms
 
 
 # 3 Create the Unix Video Group
-RUN echo 'SUBSYSTEM=="kfd", KERNEL=="kfd", TAG+="uaccess", GROUP="video"' | sudo tee /etc/udev/rules.d/70-kfd.rules &&\
-    usermod -a -G video $USER
+RUN echo 'SUBSYSTEM=="kfd", KERNEL=="kfd", TAG+="uaccess", GROUP="video"' | tee /etc/udev/rules.d/70-kfd.rules
+# RUN usermod -a -G video $USER
 
 # 4 Clone and Build AOMP
 RUN cd $HOME &&\
