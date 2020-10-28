@@ -31,10 +31,21 @@ RUN apt-get install -y curl git &&\
 # &
 # Additional packages used by rocgdb
 
-RUN apt-get install -y cmake g++-5 g++ pkg-config libpci-dev libnuma-dev libelf-dev libffi-dev git python libopenmpi-dev gawk mesa-common-dev &&\
+RUN apt-get install -y g++-5 g++ pkg-config libpci-dev libnuma-dev libelf-dev libffi-dev git python libopenmpi-dev gawk mesa-common-dev &&\
     apt-get install -y texinfo libbison-dev bison flex libbabeltrace-dev python-pip libncurses5-dev liblzma-dev
 
+# python
+
 RUN python -m pip install CppHeaderParser argparse
+
+# cmake > 3.10
+
+RUN wget https://github.com/Kitware/CMake/releases/download/v3.13.4/cmake-3.13.4.tar.gz &&\
+    tar -zxvf cmake-3.13.4.tar.gz &&\
+    cd cmake-3.13.4 &&\
+    ./bootstrap &&\
+    make &&\
+    make install
 
 
 # 2 Verify KFD Driver

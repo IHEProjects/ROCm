@@ -69,4 +69,6 @@ docker system prune -f
 
 ```
 docker build --rm -f ./ci/docker/ubuntu18.04.Dockerfile -t qpanprojects/rocm:latest .
+
+docker push qpanprojects/rocm:latest
 ```
